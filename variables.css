@@ -1,27 +1,15 @@
 :root {
-    /* Definir las variables de las fuentes */
-    --ruta-font-Montserrat: url('fonts/Montserrat/Montserrat-Regular.ttf');
 
     /* Definir las variables de colores */
-    --fondo: rgba(149, 71, 71, 0.781);
-    --fondo__video: rgba(149, 71, 71, 0.582);
-    --texto: rgb(33, 33, 33);
-    --titulo__video: rgba(255, 217, 0, 0.781);
-    --texto__video:rgb(255, 217, 0);
-    --enlace:  rgb(0, 67, 106);
-    --hover: rgba(149, 71, 71, 0.781);
-
-    --blanco__Sintra: rgb(255, 255, 255);
-    --Skyway__Sintra: rgb(135, 178, 216);
-    --AshleighBlue__Sintra: rgb(136, 168, 193);
-    --YolkYellow__Sintra: rgb(253, 199, 0);
-    --fondo__card: rgba(253, 198, 0, 0.692);
-    --RooibosTea__Sintra: rgba(146, 55, 50, 0.836);
-
-
-
-
-
+    --texto: rgb(22, 18, 0);
+    --texto__video:rgb(255, 255, 255);
+    --fondo__header: rgba(5, 56, 95, 0.603);
+    --titulo__swiper: rgb(5, 56, 95);
+    --hover--menu:  rgba(87, 0, 6, 0.589);
+    --hover:  rgb(253, 199, 0);
+    --fondo: rgb(255, 255, 255);
+    --fondo__contenedor--cards: rgb(250, 226, 113);
+    --titulo__card: rgb(199, 40, 51);
 
     /* Definir las variables de las medidas de dispositivo */
     --mqMinWidth: 420px;

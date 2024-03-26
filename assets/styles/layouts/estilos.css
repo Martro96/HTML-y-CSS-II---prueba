@@ -1,0 +1,247 @@
+
+@import url(../variables.css);
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0; 
+    padding: 0;
+    background-color: var(--AshleighBlue__Sintra);
+    color: var(--texto);
+}
+.contenedor {
+    margin: auto;
+    text-align: center;
+}
+/**NAVEGADOR**/
+.main-nav{
+    display: flex;
+    align-items: center;
+    background-color: var(--RooibosTea__Sintra);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.main-nav__list{
+    list-style-type: none;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.main-nav__item{
+    display: flex;
+    margin: 0 10px;
+}
+
+.main-nav__link {
+    text-decoration: none;
+    color: var(--YolkYellow__Sintra);
+    padding: 3px;
+    font-weight:300;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav__link:hover {
+    color: var(--blanco__Sintra);
+    text-decoration: underline;
+}
+/**VIDEO**/
+
+.video {
+    position: relative; 
+    margin: 0;
+    min-height: 60vh;
+
+}
+.video__video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: top;
+    left: 0;
+}
+
+.video__textos {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
+    gap: 10px;
+}
+
+.video__titulo {
+    font-family: var(--font-family-work-sans);
+    color: var(--titulo__video);
+    font-size: 3rem;
+    padding: 15px;
+    background-color: var(--fondo__video);
+    border-radius: 25px;
+    margin: 5px;
+}
+
+.video__texto {
+    color: var(--texto__video);
+    font-size: 2rem;
+    padding: 15px;
+    background-color: var(--fondo__video);
+    border-radius: 25px;
+}
+
+/**INFO**/
+
+.info {
+    width: 100%;
+    background-color: var(--RooibosTea__Sintra);
+}
+.info__textos {
+    display: grid;
+    margin: auto;
+    color: var(--texto);
+    font-size: 1rem;
+    font-weight: bold;
+    width: 85%;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+
+/**CARDS**/
+.contenedor__cards {
+    background-color: var(--AshleighBlue__Sintra);
+
+}
+.contenedor__cards--titulo {
+    color: var(--YolkYellow__Sintra);
+    background-color: var(--AshleighBlue__Sintra);
+    font-size: 2rem;
+    grid-template-columns: auto;
+    align-items: center;
+    padding-top: 50px;
+}
+.slider {
+    position: relative;
+    height: 700px;
+    background-color: var(--AshleighBlue__Sintra);
+    width: 85%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 2em;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    display: flex;
+}
+.card {
+    margin: auto;
+    border-radius: 15px;
+    background-color: var(--fondo__card);
+    width: 600px;
+    overflow: hidden;
+    border-radius: 15px;
+    display: grid;
+    align-items: center;
+    position: absolute;
+
+}
+
+.card--grande {
+    flex: 0 0 50%; /* La tarjeta del centro es más grande, ocupa la mitad del espacio */
+}
+
+.card__textos {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 20px;
+    line-height: 28px;
+    text-align: center;
+}
+.card__img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card__enlace {
+    color: var(--RooibosTea__Sintra);
+    text-decoration: none;
+}
+
+.card__enlace:hover {
+    color: var(--blanco__Sintra);
+    text-decoration: underline;
+}
+
+
+.slider__next, .slider__back {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    justify-content: center;
+    color: var(--YolkYellow__Sintra);
+    cursor: pointer;
+}
+
+
+.slider__next {
+    left: unset;
+    right: 50px;
+}
+
+/*
+.carrousel .puntos {
+    margin: 1em 0 0;
+    padding: 0.4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+}
+
+.carrousel .punto {
+    transition: all 0.4s ease;
+    width: 1.3em;
+    height: 1.3em;
+    background-color: #00436A;
+    margin: 1em 1em 0;
+    list-style: none;
+    border-radius: 100%;
+}
+
+.carrousel .punto.activo {
+    background-color:#ffa707;
+}*/
+
+/*.home-title {
+    font-family: $font-family-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: $uoc-corporate;
+
+    @media (min-width: $mqMinWidth) {
+font-size: 36px;
+    }
+}
+
+.contenedor__footer {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    text-align: center;
+}
+  */
