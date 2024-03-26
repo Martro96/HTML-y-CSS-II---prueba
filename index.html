@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 
 <html>
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width">
-            <link rel="stylesheet" type="text/css" href="estilos.css"><!-- do not remove this line! -->
-            <link href="../uoc-boilerplate/node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
-            <link rel="stylesheet" href="../uoc-boilerplate/node_modules/swiper/swiper.css">
-            <link rel="stylesheet" href="../uoc-boilerplate/node_modules/swiper/swiper.min.css">
-            <link rel="shortcut icon" href="./assets/images/bandera favicon.png" type="image/x-icon">
-            <title>Conoce Sintra</title>
-        </head>
-        <body>
-            <div class="contenedor"> <!--Bloque-->
-                <button class="abrir__menu" id="abrir"><i class="abrir__menu--hamburguesa fa-solid fa-bars"></i></button>
-                <nav class="main-nav" aria-label="Main" id="nav">  <!--Bloque-->
-                    <button class="cerrar__menu" id="cerrar"><i class="cerrar__menu--x fa-solid fa-x"></i></i></button>
-                <ul class="main-nav__list">
-                    <li class="main-nav__item">
-                        <a href="#" class="main-nav__link">Sobre Nosotros</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="#" class="main-nav__link">Lugares que visitar</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="#" class="main-nav__link">Experiencias</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="#" class="main-nav__link">Mapa</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="#" class="main-nav__link">Contacto</a>
-                    </li>
-                    </ul>
-                </nav>
 
-                <div class="video"> <!--Bloque-->
-                    <div class="video__textos"><!--Elemento-->
-                        <h2 class="video__titulo">Bienvenido a Sintra</h2>
-                        <p class="video__texto">La villa portuguesa Patrimonio de la Humanidad</p>
-                    </div>
-                    <video class="video__video video__capa" src="./assets/images/video Sintra introduccion.mp4" autoplay muted loop></video><!--Elemento-->
-                </div>
-        
-            <div class="info"> <!--Bloque-->
-                <div class="info__textos"> <!--Elemento-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="estilos.css"><!-- do not remove this line! -->
+    <link href="../uoc-boilerplate/node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="../uoc-boilerplate/node_modules/swiper/swiper.css">
+    <link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
+    <link rel="stylesheet" href="../uoc-boilerplate/node_modules/swiper/swiper.min.css">
+    <link rel="shortcut icon" href="./assets/images/bandera favicon.png" type="image/x-icon">
+    <title>Conoce Sintra</title>
+</head>
+
+<body>
+    <div class="contenedor"> <!--Bloque-->
+        <button class="abrir__menu" id="abrir"><i class="abrir__menu--hamburguesa fa-solid fa-bars"></i></button>
+        <nav class="main-nav" aria-label="Main" id="nav"> <!--Bloque-->
+            <button class="cerrar__menu" id="cerrar"><i class="cerrar__menu--x fa-solid fa-x"></i></i></button>
+            <ul class="main-nav__list">
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Sobre Nosotros</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Lugares que visitar</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Experiencias</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Mapa</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="video"> <!--Bloque-->
+            <div class="video__textos"><!--Elemento-->
+                <h2 class="video__titulo">Bienvenido a Sintra</h2>
+                <p class="video__texto">La villa portuguesa Patrimonio de la Humanidad</p>
+            </div>
+            <video class="video__video video__capa" src="./assets/images/video Sintra introduccion.mp4" autoplay muted
+                loop></video><!--Elemento-->
+        </div>
+
+        <div class="info"> <!--Bloque-->
+            <div class="info__textos"> <!--Elemento-->
                 <h3 class="info__titulo">Donde la historia y la belleza se entrelazan</h3>
                 <blockquote class="info__texto">
                     "¡Eterna y sagrada, oh amada Sintra!<br>
@@ -60,135 +67,162 @@
                     <cite class="info__cita">&mdash; Antero de Quental</cite>
                 </blockquote>
             </div>
+        </div>
+
+
+        <!-- Swiper -->
+        <div class="contenedor__cards">
+            <div class="titulo__swiper">
+                <h3 class="contenedor__cards--titulo">Lo que no te puedes perder</h3>
             </div>
 
-
-            <!-- Swiper -->
-            <div class="contenedor__cards"> 
-                <h3 class="contenedor__cards--titulo">Lo que no te puedes perder</h3>
-                <swiper-container class="swiper__wrapper"
-                    slides-per-view="3"
-                    grid-rows="1"
-                    mousewheel-force-to-axis="true"
-                >
-                    <swiper-button-next class="swiper__button-next"></swiper-button-next>
-                    <swiper-button-prev class="swiper__button-prev"></swiper-button-prev>
-                    
-                    <swiper-slide class="swiper__slide">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"> <!-- Slide 1 -->
                         <img class="swiper__img" src="./assets/images/Palacio da Pena (1).jpg" alt="Palacio da Pena">
                         <div class="swiper__textos">
                             <a href="#" class="swiper__enlace">
                                 <h3 class="swiper__titulo swiper__titulo--enlace">Palacio da Pena</h3>
                             </a>
-                            <p class="swiper__texto">El Palacio da Pena se alza majestuosamente sobre la colina más alta de Sintra, destacando con su arquitectura colorida y única. Desde sus terrazas, se puede disfrutar de vistas panorámicas impresionantes de los alrededores, ofreciendo una experiencia inolvidable a quienes lo visitan.</p>
+                            <p class="swiper__texto">
+                                El Palacio da Pena se alza majestuosamente sobre la colina más alta de Sintra, destacando con su arquitectura colorida y única. Desde sus terrazas, se puede disfrutar de vistas panorámicas impresionantes de los alrededores, ofreciendo una experiencia inolvidable a quienes lo visitan.
+                            </p>
                         </div>
-                    </swiper-slide>
-                    
-                    <swiper-slide class="swiper__slide">
-                        <img class="swiper__img" src="./assets/images/Palacete Quinta da Regaleira.jpg" alt="Quinta de Regaleira">
+                    </div>
+
+                    <div class="swiper-slide"> <!-- Slide 2 -->
+                        <img class="swiper__img" src="./assets/images/Palacete Quinta da Regaleira.jpg"
+                            alt="Quinta de Regaleira">
                         <div class="swiper__textos">
                             <a href="#" class="swiper__enlace">
                                 <h3 class="swiper__titulo swiper__titulo--enlace">Quinta de Regaleira</h3>
                             </a>
-                            <p class="swiper__texto">Un lugar mágico y enigmático que cautiva a sus visitantes con su combinación de arquitectura, paisajes exuberantes y elementos simbólicos. Construido por un aristócrata portugués, este palacete y sus jardines esconden rincones secretos y pasadizos que invitan a explorar su historia y misterios.</p>
+                            <p class="swiper__texto">
+                                Un lugar mágico y enigmático que cautiva a sus visitantes con su combinación de arquitectura, paisajes exuberantes y elementos simbólicos. Construido por un aristócrata portugués, este palacete y sus jardines esconden rincones secretos y pasadizos que invitan a explorar su historia y misterios.
+                            </p>
                         </div>
-                    </swiper-slide>
-            
-                    <swiper-slide class="swiper__slide">
-                        <img class="swiper__img" src="./assets/images/Palacio real.jpg" alt="Palacio Nacional de Sintra">
+                    </div>
+                    <div class="swiper-slide"> <!-- Slide 3 -->
+                        <img class="swiper__img" src="./assets/images/Palacio real.jpg"
+                            alt="Palacio Nacional de Sintra">
                         <div class="swiper__textos">
                             <a href="#" class="swiper__enlace">
                                 <h3 class="swiper__titulo swiper__titulo--enlace">Palacio Nacional</h3>
                             </a>
-                            <p class="swiper__texto">Situado en el corazón del casco antiguo, es un testimonio de la rica historia y cultura de la región. Conocido por sus enormes chimeneas blancas y su exquisita decoración interior, el palacio ofrece una fascinante colección de muebles, azulejos y obras de arte que reflejan siglos de historia portuguesa.</p>
+                            <p class="swiper__texto">
+                                Situado en el corazón del casco antiguo, es un testimonio de la rica historia y cultura de la región. Conocido por sus enormes chimeneas blancas y su exquisita decoración interior, el palacio ofrece una fascinante colección de muebles, azulejos y obras de arte que reflejan siglos de historia portuguesa.
+                            </p>
                         </div>
-                    </swiper-slide>
-            
-                    <swiper-slide class="swiper__slide">
-                        <img class="swiper__img" src="./assets/images/Palacio de Monserrate.jpg" alt="Palacio de Monserrate">
+                    </div>
+
+                    <div class="swiper-slide"> <!-- Slide 4 -->
+                        <img class="swiper__img" src="./assets/images/Palacio de Monserrate.jpg"
+                            alt="Palacio de Monserrate">
                         <div class="swiper__textos">
                             <a href="#" class="swiper__enlace">
                                 <h3 class="swiper__titulo swiper__titulo--enlace">Palacio de Monserrate</h3>
                             </a>
-                            <p class="swiper__texto">Una joya arquitectónica situada en medio de exuberantes jardines botánicos. Con su fusión de estilos arquitectónicos, que van desde el árabe hasta el gótico, y su entorno natural, este palacio ofrece una experiencia única que combina historia, arte y naturaleza en un mismo lugar.</p>
+                            <p class="swiper__texto">
+                                Una joya arquitectónica situada en medio de exuberantes jardines botánicos.
+                                <br><br> Con su fusión de estilos arquitectónicos, que van desde el árabe hasta el gótico, y su entorno natural, este palacio ofrece una experiencia única que combina historia, arte y naturaleza en un mismo lugar.
+                            </p>
                         </div>
-                    </swiper-slide>
-            
-                    <swiper-slide class="swiper__slide">
+                    </div>
+
+                    <div class="swiper-slide"> <!-- Slide 5 -->
                         <img class="swiper__img" src="./assets/images/Castelo dos Mouros.jpg" alt="Castelo dos Mouros">
                         <div class="swiper__textos">
                             <a href="#" class="swiper__enlace">
                                 <h3 class="swiper__titulo swiper__titulo--enlace">Castelo dos Mouros</h3>
                             </a>
-                            <p class="swiper__texto">Estas ruinas árabes, son un recordatorio evocador del pasado de Sintra. Situado en una posición estratégica en lo alto de la colina, el castillo ofrece vistas panorámicas impresionantes de la región circundante, proporcionando a los visitantes la oportunidad de sumergirse en la historia y el paisaje dela ciudad.</p>
-                        </div>
-                    </swiper-slide>
-            
-                </swiper-container>                
-            </div>
-
-            <!--cambio-->
-            <div class="franja__cambio">
-                <img class="franja__cambio--img" src="./assets/images/azulejos 2.jpg" alt="Azulejos portugueses">
-            </div>
-
-                <!--UBICACIÓN-->
-        
-            <div class="mapa"> 
-                <div class="ubiacion__llegada"> <!--Bloque-->
-                <map class="ubiacion__mapa" name="Sintra">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d198903.48711566362!2d-9.360639!3d38.835507!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ed09be5d23323%3A0x400ebbde4903720!2sSintra%2C%20Portugal!5e0!3m2!1ses!2ses!4v1711129414182!5m2!1ses!2ses" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>          
-                </map>
-                </div>
-            </div>
-                
-            <!--cambio-->
-            <div class="franja__cambio">
-                <img class="franja__cambio--img" src="./assets/images/azulejos 2.jpg" alt="Azulejos portugueses">
-            </div>
-
-                <div class="contenedor__ubicacion"><!--Bloque-->
-                    <h3 class="contenedor__titulo">Cómo llegar</h3> <!--Elemento-->
-                    <div class="contenedor__medios">
-
-                        <div class="medio__card">
-                            <i class="medio__icono fa-solid fa-car"><span>COCHE</span></i>
-                            <p class="medio__texto">
-                            No es aconsejable que intente conducir hasta Sintra; sus estrechas carreteras de montana no fueron disenadas para el
-                            denso tráfico actual y hay muy poco espacio para aparcar.
+                            <p class="swiper__texto">
+                                Estas ruinas árabes, son un recordatorio evocador del pasado de Sintra. Situado en una posición estratégica en lo alto de la colina, el castillo ofrece vistas panorámicas impresionantes de la región circundante, proporcionando a los visitantes la oportunidad de sumergirse en la historia y el paisaje de la ciudad.
                             </p>
                         </div>
-
-                        <div class="medio__card">
-                            <i class="medio__icono fa-solid fa-train"><span>TREN</span></i>
-                            <p class="medio__texto">
-                            Entre Lisboa y Sintra hay dos servicios regulares de tren muy economicos. 
-                            <br><br>
-                            El primer servicio sale de la estacion de Rossio, en el centro de Lisboa, mientras que el segundo sale de la Estacion de Oriente. 
-                            <br><br>
-                            El viaje en tren dura aproximdamente 40 minutos.
-                            </p>
-                        </div>
-        
-                        <div class="medio__card">
-                            <i class="medio__icono fa-solid fa-bus"><span>AUTOBÚS</span></i>
-                            <p class="medio__texto">
-                            Hay servicios directos de autobus desde las poblaciones costeras de Cascais y Estoril hasta Sintra. 
-                            <br><br>
-                            El servicio 417 sale de la estacion de autobus de Cascais, y la linea 418 sale desde Estoril, estacion de tren.
-                            </p>
-                        </div>
-
                     </div>
+
                 </div>
-            
+
+                <!--navigation and pagination buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+
             </div>
         </div>
-        
-            <include src="./views/footer.html"></include>
-            <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+        <!--cambio-->
+        <div class="franja__cambio">
+            <img class="franja__cambio--img" src="./assets/images/azulejos 2.jpg" alt="Azulejos portugueses">
+        </div>
+
+        <!--UBICACIÓN-->
+
+        <div class="mapa">
+            <div class="ubiacion__llegada"> <!--Bloque-->
+                <map class="ubiacion__mapa" name="Sintra">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d198903.48711566362!2d-9.360639!3d38.835507!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ed09be5d23323%3A0x400ebbde4903720!2sSintra%2C%20Portugal!5e0!3m2!1ses!2ses!4v1711129414182!5m2!1ses!2ses"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </map>
+            </div>
+        </div>
+
+        <!--cambio-->
+        <div class="franja__cambio">
+            <img class="franja__cambio--img" src="./assets/images/azulejos 2.jpg" alt="Azulejos portugueses">
+        </div>
+
+        <div class="contenedor__ubicacion"><!--Bloque-->
+            <h3 class="contenedor__titulo">Cómo llegar</h3> <!--Elemento-->
+            <div class="contenedor__medios">
+
+                <div class="medio__card">
+                    <i class="medio__icono fa-solid fa-car"><span>COCHE</span></i>
+                    <p class="medio__texto">
+                        No es aconsejable que intente conducir hasta Sintra; sus estrechas carreteras de montana no
+                        fueron disenadas para el
+                        denso tráfico actual y hay muy poco espacio para aparcar.
+                    </p>
+                </div>
+
+                <div class="medio__card">
+                    <i class="medio__icono fa-solid fa-train"><span>TREN</span></i>
+                    <p class="medio__texto">
+                        Entre Lisboa y Sintra hay dos servicios regulares de tren muy economicos.
+                        <br><br>
+                        El primer servicio sale de la estacion de Rossio, en el centro de Lisboa, mientras que el
+                        segundo sale de la Estacion de Oriente.
+                        <br><br>
+                        El viaje en tren dura aproximdamente 40 minutos.
+                    </p>
+                </div>
+
+                <div class="medio__card">
+                    <i class="medio__icono fa-solid fa-bus"><span>AUTOBÚS</span></i>
+                    <p class="medio__texto">
+                        Hay servicios directos de autobus desde las poblaciones costeras de Cascais y Estoril hasta
+                        Sintra.
+                        <br><br>
+                        El servicio 417 sale de la estacion de autobus de Cascais, y la linea 418 sale desde Estoril,
+                        estacion de tren.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 
-        </body>
+</body>
+
 </html>

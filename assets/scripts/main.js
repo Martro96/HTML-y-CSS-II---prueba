@@ -9,43 +9,59 @@
 /**
  * Write any other JavaScript below
  */
-import { register } from 'swiper/element/bundle';
-register();
+import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
 
-
-let swiperContainer = document.querySelector('.swiper__wrapper');
-let swiper = new swiper(swiperContainer, {
+new Swiper(".swiper", {
+	direction: "horizontal",
+	loop: true,
     slidesPerView: 3,
-    gridRows: 1,
-    mousewheelForceToAxis: true,
-});
+    spaceBetween: 30,
 
-window.addEventListener('resize', function() {
-    if (window.innerWidth < 768) { 
-        swiper.params.slidesPerView = 1;
-        swiper.update(); 
-    } else {
-        swiper.params.slidesPerView = 3;
-        swiper.update();
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev"
+	},
+
+	autoplay: {
+		delay: 3000,
+	},
+
+	pagination: {
+		el: ".swiper-pagination",
+		type: "bullets",
+		clickable: true,
+	},
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+        slidesPerView: 1,
+        spaceBetween: 50
+    },
+    // when window width is >= 480px
+    480: {
+        slidesPerView: 2,
+        spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+    }
     }
 });
 
 
-const nav = document.querySelector("#nav");
-const abrir = document.querySelector("#abrir");
-const cerrar = document.querySelector("#cerrar");
-const enlacesCerrarMenu = document.querySelectorAll(".main-nav__link");
+/****MENÚ HAMBURGUESA******/
+document.addEventListener("DOMContentLoaded", function() {
+    const nav = document.querySelector("#nav");
+    const abrir = document.querySelector("#abrir");
+    const cerrar = document.querySelector("#cerrar");
 
-abrir.addEventListener("click", () => {
-    nav.classList.add("visible");
-});
+    abrir.addEventListener("click", () => {
+        nav.classList.add("main-nav--visible"); 
+    });
 
-cerrar.addEventListener("click", () => {
-    nav.classList.remove("visible");
-});
-
-enlacesCerrarMenu.forEach(enlace => {
-    enlace.addEventListener("click", () => {
-        nav.classList.remove("visible");
+    cerrar.addEventListener("click", () => {
+        nav.classList.remove("main-nav--visible"); 
     });
 });

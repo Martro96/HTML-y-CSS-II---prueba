@@ -12,7 +12,4 @@
     --fondo__contenedor--medios: rgb(205,233,255);
 
     --titulo__card: rgb(199, 40, 51);
-
-    /* Definir las variables de las medidas de dispositivo */
-    --mqMinWidth: 420px;
 }

@@ -161,43 +161,42 @@ body {
 
 /**CARDS**/
 .contenedor__cards {
+    display: inline;
     background-color: var(--fondo__contenedor--cards);
-    width: 100%;
-    position: relative;
-    display: grid;
-    grid-template-rows: 2;
-    overflow-x: auto;
-    z-index: 1;
 }
 
 .contenedor__cards--titulo {
+    background-color: var(--fondo__contenedor--cards);
     font-family: 'Poiret One', sans-serif;
     color: var(--titulo__swiper);
     font-size: 2.5rem;
-    display: flex;
-    align-items: start;
+    text-align: start;
+    width: 100%;
+    margin: auto;
     padding: 30px 50px;
-    margin: 0;
+    display: inline-block;
 }
-.swiper__wrapper {
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--fondo);
+}
+.swiper {
+    background-color: var(--fondo__contenedor--cards);
+    width: 100%;
+    padding: 20px;
+}
+.swiper-wrapper {
+    position: absolute;
     display: flex;
-    width: 90%; /* Usa el 100% del ancho */
-    overflow-x: auto; 
+    background-color: var(--fondo__contenedor--cards);
+    padding-bottom: 50px;
 }
 
-.swiper__slide {
-    position: relative;
+.swiper-slide {
     font-size: 18px;
     background-color: var(--fondo);
-    border-radius: 15px; /* Aplica el mismo radio de borde a todas las esquinas */
-    text-align: start;
-    width: 30%; 
-    height:auto;
-    margin: 50px; 
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
-    overflow: visible;
-
-
+    border-radius: 15px;
+    min-height:max-content;
 }
 
 .swiper__textos {
@@ -232,7 +231,7 @@ body {
 }
 
 .swiper__enlace:hover {
-    color: var(--hover);
+    color: var(--hover--menu);
     text-decoration: underline;
 }
 
@@ -250,22 +249,21 @@ body {
     padding: 20px;
     display: inline-block;
     background-color: var(--fondo__contenedor--medios);
-
 }
 
 .contenedor__medios {
     display: flex;
     margin: auto;
-    gap: 20px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 85%;
-    padding: 40px;
+    gap: 40px;
+    padding: 20px;
 }
 
 .medio__card {
     width: 280px;
-    height: 450px;
+    height: auto;
     margin-left: 20px;
     justify-content: center;
     background-color: var(--fondo);
@@ -297,38 +295,31 @@ span {
 }
 /*******FORMATO RESPONSIVE********/
 @media only screen and (max-width: 420px) {
-    /*MENÚ*/
-    .abrir__menu,
-    .cerrar__menu {
-        display: block;
-        cursor: pointer;
-        border: 0;
-        font-size: 2rem;
-        background-color: transparent;
-    }
-
+    
     .abrir__menu {
-        color: var(--texto__video);
-        border-radius: 5px;
+        display: block;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
         position: absolute;
         z-index: 1;
-        margin: 40px 10px;
-        display: flex;
+        color: var(--fondo);
+        font-size: 2rem;
         right: 0;
     }
 
-    .abrir__menu:hover {
-        color: var(--hover--menu);
-    }
-
     .cerrar__menu {
-        color: var(--texto__video);
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+        display: block;
+        border: 0;
+        background-color: transparent;
+        color: var(--texto);
+        font-size: 1.5rem;
+        right: 0;
+        padding-right: 40px;
     }
-
-    .cerrar__menu:hover {
-        color: var(--hover--menu);
-    }
-
     .main-nav {
         opacity: 0;
         visibility: hidden;
@@ -339,25 +330,32 @@ span {
         position: absolute;
         top: 0;
         right: 0;
-        background-color: var(--fondo__header);
+        bottom: 0;
+        background-color: var(--fondo__contenedor--medios);
         padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.01);
-        z-index: 100;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     }
 
-    .main-nav__list li a {
-        text-decoration: none;
-        color: var(--titulo__card);
-        padding: 4px;
-        border-radius: 3px;
-        font-weight: 700;
-    }
-
-    .main-nav.visible {
+    .main-nav--visible {
         opacity: 1;
         visibility: visible;
+        z-index: 2;
     }
+    .main-nav__list {
+        flex-direction: column;
+        align-items: end;
+    }
+    .main-nav__link {
+        color: var(--titulo__card);
+        background-color: var(--fondo__contenedor--cards);
+        z-index: 2;
+        font-family: 'Poiret One', sans-serif;
+        font-size: 1.5rem;
+        border-radius: 15px;
+        padding: 10px;
+    }
+
+
     /*TEXTO VIDEO*/
 
     .video__titulo {
@@ -377,63 +375,17 @@ span {
     /*INFO*/
     .info__textos {
         display: inline-block;
-        padding: 10px;
+        padding: 20px 10px;
     }
     .info__texto {
         margin: auto;
         font-size: 16px;
     }
 
-    /*CARDS*/
-    .swiper__wrapper {
-        width: 85%;
-    }
-    
-    .swiper__slide {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-    }
-    
-    .swiper__textos {
-        display: inline-block;
-        text-align: center;
-        padding: 10px;
-    
-    }
-    .swiper__img {
-        display: block;
-        width: 100%;
-        height: 200px;
-        object-fit:cover;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-    
-    }
-    .swiper__titulo {
-        font-family: 'Poiret One', sans-serif;
-        font-size: 30px;
-        font-weight: bold;
-        color: var(--titulo__card);
-    }
-    .swiper__texto {
-        line-height: 30px;
-        padding: 0 15px;
-        text-align: center;
-    }
-    .swiper__enlace {
-        text-decoration: none;
-        color: var(--titulo__swiper);
-    }
-    
-    .swiper__enlace:hover {
-        color: var(--hover);
-        text-decoration: underline;
-    }
     /*FRANJA CAMBIO*/
     .franja__cambio--img {
         width: 100%;
-        height: 150px;
+        height: 80px;
         object-fit: cover;
     }
     /*FCÓMO LLEGAR*/
@@ -442,8 +394,18 @@ span {
         display: flex;
         flex-direction: column;
         margin: auto;
+        gap: 50px;
     }
-    
-    
-
+    .medio__card {
+        width: 280px;
+        height: fit-content;
+        margin-left: 20px;
+        justify-content: center;
+        background-color: var(--fondo);
+        position: relative;
+        align-items: center;
+        box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+        transition: 0.5s ease-in-out;
+        border-radius: 20px;
+    }
 }
