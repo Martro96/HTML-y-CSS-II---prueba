@@ -9,6 +9,8 @@
     --hover:  rgb(253, 199, 0);
     --fondo: rgb(255, 255, 255);
     --fondo__contenedor--cards: rgb(250, 226, 113);
+    --fondo__contenedor--medios: rgb(205,233,255);
+
     --titulo__card: rgb(199, 40, 51);
 
     /* Definir las variables de las medidas de dispositivo */

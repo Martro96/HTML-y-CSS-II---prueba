@@ -13,7 +13,9 @@
         </head>
         <body>
             <div class="contenedor"> <!--Bloque-->
-                <nav class="main-nav" aria-label="Main">  <!--Bloque-->
+                <button class="abrir__menu" id="abrir"><i class="abrir__menu--hamburguesa fa-solid fa-bars"></i></button>
+                <nav class="main-nav" aria-label="Main" id="nav">  <!--Bloque-->
+                    <button class="cerrar__menu" id="cerrar"><i class="cerrar__menu--x fa-solid fa-x"></i></i></button>
                 <ul class="main-nav__list">
                     <li class="main-nav__item">
                         <a href="#" class="main-nav__link">Sobre Nosotros</a>
@@ -145,37 +147,38 @@
                 <img class="franja__cambio--img" src="./assets/images/azulejos 2.jpg" alt="Azulejos portugueses">
             </div>
 
-                <div class="medio"><!--Bloque-->
-                    <h3 class="medio__titulo">Cómo llegar</h3> <!--Elemento-->
-                    <div class="medio__medio">
-                        <i class="medio__icono fa-solid fa-car"><span>COCHE</span></i>
-                        <p class="medio__textoMedio">
-                        No es aconsejable que intente conducir hasta Sintra; sus estrechas carreteras de montana no fueron disenadas para el
-                        denso tráfico actual y hay muy poco espacio para aparcar. En verano, los atascos son prácticamente constantes, mientras los
-                        frustrados conductores buscan en vano una plaza de aparcamiento.
-                        </p>
-                    </div>
-                </div>
-                <div class="medio"><!--Bloque-->
-                    <div class="medio__medio">
-                        <i class="medio__icono fa-solid fa-train"><span>TREN</span></i>
-                        <p class="medio__textoMedio">
-                        Entre Lisboa y Sintra hay dos servicios regulares de tren muy economicos. El primer servicio sale de la estacion de Rossio, en el
-                        centro de Lisboa, mientras que el segundo sale de la Estacion de Oriente. El viaje en tren dura 40m (desde Rossio) o 47m (desde
-                        Oriente), y un billete de ida y vuelta cuesta 4,80 €. El servicio de tren empieza pronto por la mañana y continua hasta bien entrada la
-                        noche, y hay hasta tres salidas por hora.
-                        </p>
-                    </div>
-                </div>
+                <div class="contenedor__ubicacion"><!--Bloque-->
+                    <h3 class="contenedor__titulo">Cómo llegar</h3> <!--Elemento-->
+                    <div class="contenedor__medios">
+
+                        <div class="medio__card">
+                            <i class="medio__icono fa-solid fa-car"><span>COCHE</span></i>
+                            <p class="medio__texto">
+                            No es aconsejable que intente conducir hasta Sintra; sus estrechas carreteras de montana no fueron disenadas para el
+                            denso tráfico actual y hay muy poco espacio para aparcar.
+                            </p>
+                        </div>
+
+                        <div class="medio__card">
+                            <i class="medio__icono fa-solid fa-train"><span>TREN</span></i>
+                            <p class="medio__texto">
+                            Entre Lisboa y Sintra hay dos servicios regulares de tren muy economicos. 
+                            <br><br>
+                            El primer servicio sale de la estacion de Rossio, en el centro de Lisboa, mientras que el segundo sale de la Estacion de Oriente. 
+                            <br><br>
+                            El viaje en tren dura aproximdamente 40 minutos.
+                            </p>
+                        </div>
         
-                <div class="medio"><!--Bloque-->
-                    <div class="medio__medio">
-                        <i class="medio__icono fa-solid fa-bus"><span>AUTOBÚS</span></i>
-                        <p class="medio__textoMedio">
-                        Hay servicios directos de autobus desde las poblaciones costeras de Cascais y Estoril hasta Sintra. El servicio 417 sale de la estacion
-                        de autobus de Cascais, tarda 30m y el billete sencillo cuesta 4,25 €. Desde Estoril, el servicio de autobus es la linea 418, sale de la
-                        estacion de tren y tarda 30m.
-                        </p>
+                        <div class="medio__card">
+                            <i class="medio__icono fa-solid fa-bus"><span>AUTOBÚS</span></i>
+                            <p class="medio__texto">
+                            Hay servicios directos de autobus desde las poblaciones costeras de Cascais y Estoril hasta Sintra. 
+                            <br><br>
+                            El servicio 417 sale de la estacion de autobus de Cascais, y la linea 418 sale desde Estoril, estacion de tren.
+                            </p>
+                        </div>
+
                     </div>
                 </div>
             
