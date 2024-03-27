@@ -9,7 +9,7 @@
 /**
  * Write any other JavaScript below
  */
-import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
+import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js"; /*Esto no sé si hace flta al tener el module instalado de swiper*/
 
 new Swiper(".swiper", {
 	direction: "horizontal",
@@ -23,7 +23,7 @@ new Swiper(".swiper", {
 	},
 
 	autoplay: {
-		delay: 3000,
+		delay: 5000,
 	},
 
 	pagination: {

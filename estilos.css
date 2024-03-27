@@ -9,6 +9,9 @@
     font-family: 'Work Sans';
     src: url('./assets/fonts/Work_Sans/static/WorkSans-Regular.ttf');
 }
+title {
+    display: none;
+}
 
 * {
     box-sizing: border-box;
