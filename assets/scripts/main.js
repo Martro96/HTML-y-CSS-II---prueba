@@ -25,27 +25,21 @@ new Swiper(".swiper", {
 	autoplay: {
 		delay: 5000,
 	},
-
-	pagination: {
-		el: ".swiper-pagination",
-		type: "bullets",
-		clickable: true,
-	},
     breakpoints: {
-        // when window width is >= 320px
-        320: {
-        slidesPerView: 1,
-        spaceBetween: 50
+    // when window width is >= 320px
+    250: {
+    slidesPerView: 1,
+    spaceBetween: 50
     },
-    // when window width is >= 480px
-    480: {
+    // when window width is >= 768 pantalla desktop
+    768: {
         slidesPerView: 2,
-        spaceBetween: 30
-    },
-    // when window width is >= 640px
-    640: {
-        slidesPerView: 3,
         spaceBetween: 30,
+    },
+    // when window width is >=900
+    900: {
+        slidesPerView: 3,
+        spaceBetween: 30
     }
     }
 });

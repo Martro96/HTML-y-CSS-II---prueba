@@ -1,4 +1,3 @@
-
 @import url(variables.css);
 @font-face {
     font-family: 'Poiret One';
@@ -65,7 +64,7 @@ body {
 .main-nav__link {
     text-decoration: none;
     color: var(--texto__video);
-    background-color: var(--fondo__header);
+    background-color: var(--hover--menu);
     padding: 7px;
     border-radius: 5px;
     margin: 30px;
@@ -76,7 +75,7 @@ body {
 }
 
 .main-nav__link:hover {
-    background-color: var(--hover--menu);
+    background-color: var(--fondo__header);
     text-decoration: underline;
 }
 /**VIDEO**/
@@ -164,54 +163,57 @@ body {
 
 /**CARDS**/
 .contenedor__cards {
-    display: inline;
     background-color: var(--fondo__contenedor--cards);
+    
 }
 
 .contenedor__cards--titulo {
-    background-color: var(--fondo__contenedor--cards);
     font-family: 'Poiret One', sans-serif;
     color: var(--titulo__swiper);
     font-size: 2.5rem;
     text-align: start;
-    width: 100%;
-    margin: auto;
+    min-height: fit-content;
+    display: flex;
     padding: 30px 50px;
-    display: inline-block;
-}
-.swiper-button-prev,
-.swiper-button-next {
-    color: var(--fondo);
 }
 .swiper {
     background-color: var(--fondo__contenedor--cards);
-    width: 100%;
-    padding: 20px;
+    display: flex;
+    margin: auto;
+    align-items: baseline;
+    justify-content: center;
+    width: 90%;
+    gap: 20px;
 }
 .swiper-wrapper {
     position: absolute;
     display: flex;
     background-color: var(--fondo__contenedor--cards);
-    padding-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .swiper-slide {
     font-size: 18px;
     background-color: var(--fondo);
     border-radius: 15px;
-    min-height:max-content;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 600px;
+    position: relative;
+    align-items: center;
 }
 
 .swiper__textos {
-    display: inline-block;
     text-align: center;
-    padding: 10px;
-
+    display: flex;
+    flex-direction: column;
+    align-items:center;
 }
 .swiper__img {
     display: block;
     width: 100%;
-    height: 400px;
+    height: 350px;
     object-fit:cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -222,11 +224,18 @@ body {
     font-size: 30px;
     font-weight: bold;
     color: var(--titulo__card);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .swiper__texto {
-    line-height: 30px;
-    padding: 0 15px;
+    line-height: 40px;
+    padding: 20px;
     text-align: center;
+    display: flex;
+    font-size: 18px;
+    flex-direction: column;
+    justify-content:flex-start;
 }
 .swiper__enlace {
     text-decoration: none;
@@ -238,11 +247,25 @@ body {
     text-decoration: underline;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--fondo__contenedor--cards) !important;
+    stroke: var(--texto) !important;
+    fill: var(--fondo) !important;
+    width: 20px;
+    height: 30px;
+}
+
+
+
+
 .franja__cambio--img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     display:flex;
+    background-color: var(--fondo__contenedor--cards);
+
 }
 
 /****UBICACION*****/
@@ -257,18 +280,16 @@ body {
 .contenedor__medios {
     display: flex;
     margin: auto;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
-    width: 85%;
-    gap: 40px;
-    padding: 20px;
+    width: 90%;
+    gap: 20px;
 }
 
 .medio__card {
-    width: 280px;
-    height: auto;
-    margin-left: 20px;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     background-color: var(--fondo);
     position: relative;
     align-items: center;
@@ -283,22 +304,91 @@ body {
 
 .medio__icono {
     font-size: 25px;
-    margin: 20px;
+    padding: 50px 0;
 }
 span {
     font-family: 'Poiret One', sans-serif;
     margin-top: 20px;
     font-weight: bold;
-
 }
 .medio__texto {
     font-size: 18px;
-    margin: 20px;
+    padding: 20px;
     font-family: 'Work Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    line-height: 2rem;
+
 }
+
+
+
+/*******FOOTER************/
+/* Estilos generales del footer */
+.footer {
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    background-image: url('./assets/images/Sintra pueblo.jpg');
+    background-color: rgba(0, 0, 0, 0.9);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--fondo);
+    padding: 30px; 
+    height: 60vh; 
+    display: flex; 
+}
+
+.footer__contenedor {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap; 
+    margin: auto;
+    gap: 500px;
+}
+
+.bandera__img {
+    width: 100px;
+}
+.bloqueLegal__link,
+.RRSS__icono {
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--texto__video);
+    background-color: var(--hover--menu);
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.bloqueLegal__link:hover,
+.RRSS__icono:hover  {
+    background-color: var(--fondo__header); 
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.RRSS__contenedor {
+    display: flex;
+    gap: 100px;
+    color: var(--fondo);
+}
+
+.RRSS__img {
+    height: 50px;
+    width: auto;
+}
+
+
 /*******FORMATO RESPONSIVE********/
-@media only screen and (max-width: 420px) {
-    
+/*MOBILE*/
+@media only screen and (max-width: 780px) {
     .abrir__menu {
         display: block;
         border: 0;
@@ -309,6 +399,13 @@ span {
         color: var(--fondo);
         font-size: 2rem;
         right: 0;
+        margin: 20px;
+        background-color: transparent;
+    }
+    .abrir__menu:hover, .cerrar__menu:hover {
+        background-color: var(--fondo__contenedor--cards);
+        padding: 10px;
+        border-radius: 15px;
     }
 
     .cerrar__menu {
@@ -321,7 +418,7 @@ span {
         color: var(--texto);
         font-size: 1.5rem;
         right: 0;
-        padding-right: 40px;
+        margin: 20px;
     }
     .main-nav {
         opacity: 0;
@@ -336,7 +433,8 @@ span {
         bottom: 0;
         background-color: var(--fondo__contenedor--medios);
         padding: 2rem;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        box-shadow: 0 0 0 1000vmax rgba(0, 0, 0, .5);
+        border-radius: 0 0 15px 0;
     }
 
     .main-nav--visible {
@@ -347,20 +445,23 @@ span {
     .main-nav__list {
         flex-direction: column;
         align-items: end;
+
     }
     .main-nav__link {
         color: var(--titulo__card);
-        background-color: var(--fondo__contenedor--cards);
+        background-color:transparent;
         z-index: 2;
         font-family: 'Poiret One', sans-serif;
         font-size: 1.5rem;
         border-radius: 15px;
         padding: 10px;
     }
-
-
+    .main-nav__link:hover {
+        color: var(--fondo__header);
+        font-size: 1.7rem;
+        background-color:var(--fondo__contenedor--cards);
+    }
     /*TEXTO VIDEO*/
-
     .video__titulo {
         font-family: 'Poiret One', sans-serif;
         color: var(--texto__video);
@@ -384,31 +485,93 @@ span {
         margin: auto;
         font-size: 16px;
     }
-
+    /*SWIPER*/
+    .swiper-slide {
+        min-height: 1100px;
+    }
+    .swiper-slide {
+        min-height: 950px;
+    }
+    .swiper__textos {
+        min-height: 450px;
+    }
     /*FRANJA CAMBIO*/
     .franja__cambio--img {
         width: 100%;
         height: 80px;
         object-fit: cover;
     }
-    /*FCÓMO LLEGAR*/
-    .contenedor__medios {
+    /*CÓMO LLEGAR*/
+    .contenedor__medios { /*768 2 filas coche 1 linea, tren y bus 2*/
         align-items: center;
         display: flex;
         flex-direction: column;
-        margin: auto;
-        gap: 50px;
     }
     .medio__card {
-        width: 280px;
-        height: fit-content;
-        margin-left: 20px;
-        justify-content: center;
-        background-color: var(--fondo);
-        position: relative;
-        align-items: center;
-        box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
-        transition: 0.5s ease-in-out;
-        border-radius: 20px;
+        min-height: auto;
+    } 
+}
+
+/*TABLETS*/
+
+@media only screen and (min-width: 800px) {
+    
+    /*SWIPER*/
+    .swiper-slide {
+        min-height: 1200px;
     }
+    .swiper__textos {
+        min-height: 800px;
+    }
+    .swiper__enlace {
+        padding: 10px;
+    }
+    /*FRANJA CAMBIO*/
+    .franja__cambio--img {
+        width: 100%;
+        height: 70px;
+        object-fit: cover;
+    }
+    /*CÓMO LLEGAR*/
+    .contenedor__medios { 
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+    }
+    .medio__card {
+        min-height: 750px;
+    }    
+    .medio__texto {
+        padding: 20px;
+    } 
+}
+/*PANTALLAS GRANDES*/
+@media only screen and (min-width: 1220px) {
+    /*SWIPER*/
+    .swiper-slide {
+        min-height: 1000px;
+    }
+    .swiper__textos {
+        min-height: auto;
+
+    }
+    .swiper__enlace {
+        padding: 10px;
+    }
+    /*CÓMO LLEGAR*/
+    .medio__card {
+        height: auto;
+    }
+    .contenedor__medios { 
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+    }
+    .medio__texto {
+        min-height: 200px;
+        padding: 20px;
+    } 
+
 }

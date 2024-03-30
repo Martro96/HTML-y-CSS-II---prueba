@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conoce Sintra</title>
     <link rel="stylesheet" type="text/css" href="estilos.css"><!-- do not remove this line! -->
-    <link href="../uoc-boilerplate/node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="../uoc-boilerplate/node_modules/swiper/swiper.css">
-    <link
+    <link href="../node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
+    <!--<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-		/>
-    <link rel="stylesheet" href="../uoc-boilerplate/node_modules/swiper/swiper.min.css">
+		/> -->
     <link rel="shortcut icon" href="./assets/images/bandera favicon.png" type="image/x-icon">
 </head>
+
 
 <body>
     <div class="contenedor"> <!--Bloque-->
@@ -100,7 +98,7 @@
                                 <h3 class="swiper__titulo swiper__titulo--enlace">Quinta de Regaleira</h3>
                             </a>
                             <p class="swiper__texto">
-                                Un lugar mágico y enigmático que cautiva a sus visitantes con su combinación de arquitectura, paisajes exuberantes y elementos simbólicos. Construido por un aristócrata portugués, este palacete y sus jardines esconden rincones secretos y pasadizos que invitan a explorar su historia y misterios.
+                                Un lugar mágico y enigmático que cautiva a sus visitantes con su combinación de arquitectura, paisajes exuberantes y elementos simbólicos. Construido por un aristócrata portugués, este palacete y sus jardines esconden rincones secretos que invitan a explorar su historia y misterios.
                             </p>
                         </div>
                     </div>
@@ -126,7 +124,7 @@
                             </a>
                             <p class="swiper__texto">
                                 Una joya arquitectónica situada en medio de exuberantes jardines botánicos.
-                                <br><br> Con su fusión de estilos arquitectónicos, que van desde el árabe hasta el gótico, y su entorno natural, este palacio ofrece una experiencia única que combina historia, arte y naturaleza en un mismo lugar.
+                                Con su fusión de estilos arquitectónicos, que van desde el árabe hasta el gótico, y su entorno natural, este palacio ofrece una experiencia única que combina historia, arte y naturaleza en un mismo lugar.
                             </p>
                         </div>
                     </div>
@@ -138,7 +136,7 @@
                                 <h3 class="swiper__titulo swiper__titulo--enlace">Castelo dos Mouros</h3>
                             </a>
                             <p class="swiper__texto">
-                                Estas ruinas árabes, son un recordatorio evocador del pasado de Sintra. Situado en una posición estratégica en lo alto de la colina, el castillo ofrece vistas panorámicas impresionantes de la región circundante, proporcionando a los visitantes la oportunidad de sumergirse en la historia y el paisaje de la ciudad.
+                                Estas ruinas árabes, son un recordatorio evocador del pasado de Sintra. Situado en una posición estratégica en lo alto de la colina, el castillo ofrece vistas panorámicas de la región, proporcionando a los visitantes la oportunidad de sumergirse en la historia y el paisaje de la ciudad.
                             </p>
                         </div>
                     </div>
@@ -148,7 +146,6 @@
                 <!--navigation and pagination buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
 
             </div>
         </div>
@@ -183,9 +180,8 @@
                 <div class="medio__card">
                     <i class="medio__icono fa-solid fa-car"><span>COCHE</span></i>
                     <p class="medio__texto">
-                        No es aconsejable que intente conducir hasta Sintra; sus estrechas carreteras de montana no
-                        fueron disenadas para el
-                        denso tráfico actual y hay muy poco espacio para aparcar.
+                        No es aconsejable que intente conducir hasta Sintra; sus estrechas carreteras de montaña no
+                        fueron disenadas para el denso tráfico actual y hay muy poco espacio para aparcar.
                     </p>
                 </div>
 
@@ -194,10 +190,8 @@
                     <p class="medio__texto">
                         Entre Lisboa y Sintra hay dos servicios regulares de tren muy economicos.
                         <br><br>
-                        El primer servicio sale de la estacion de Rossio, en el centro de Lisboa, mientras que el
+                        El primer servicio sale de la estacion de Rossio, en el centro de Lisboa, y el
                         segundo sale de la Estacion de Oriente.
-                        <br><br>
-                        El viaje en tren dura aproximdamente 40 minutos.
                     </p>
                 </div>
 
@@ -214,11 +208,42 @@
 
             </div>
         </div>
-
-    </div>
     </div>
 
-    <include src="./views/footer.html"></include>
+            <!--cambio-->
+            <div class="franja__cambio">
+                <img class="franja__cambio--img" src="./assets/images/azulejos 2.jpg" alt="Azulejos portugueses">
+                </div>
+        
+                <footer class="footer">
+        
+                <div class="footer__contenedor">
+                    <div class="bandera">
+                        <a href="../index.html"><img class="bandera__img" src="./assets/images/bandera favicon.png" alt="Bandera Portugal"></a>
+                    </div>
+                    <div class="bloqueLegal">
+                        <ul class="bloqueLegal__politicas">
+                            <li><a class="bloqueLegal__link" href="#">Aviso legal</a></li>
+                        </ul>
+                    </div>
+                    <div class="RRSS">
+                        <ul class="RRSS__contenedor">
+                            
+                            <li> 
+                                <i class="RRSS__icono fa-brands fa-instagram"></i> <a href="#"></a>
+                            </li>
+                            <li> 
+                                <i class="RRSS__icono fa-brands fa-facebook"></i><a href="#"></a>
+                            </li>
+                            <li> 
+                                <i class="RRSS__icono fas fa-map-marker-alt RRSS__icono"></i><a href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d198903.48711566362!2d-9.360639!3d38.835507!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ed09be5d23323%3A0x400ebbde4903720!2sSintra%2C%20Portugal!5e0!3m2!1ses!2ses!4v1711129414182!5m2!1ses!2ses"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </footer>
+
+    <include src="footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
