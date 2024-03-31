@@ -537,6 +537,9 @@ span {
         flex-direction: column;
         padding: 20px;
     }
+    .rrss__contenedor {
+        padding: 20px;
+    }
 }
 
 /*TABLETS*/
