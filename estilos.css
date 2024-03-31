@@ -38,12 +38,12 @@ body {
 .cerrar__menu {
     display: none;
 }
-.main-nav{
+.main-nav {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: space-between;
     position: absolute;
-    z-index: 1; 
+    z-index: 2; /* Asegúrate de que el menú esté por encima de la capa oscura */
     margin: auto;
     width: 100%;
 }
@@ -63,19 +63,18 @@ body {
 
 .main-nav__link {
     text-decoration: none;
-    color: var(--texto__video);
-    background-color: var(--hover--menu);
-    padding: 7px;
+    color: var(--fondo);
+    padding: 5px;
     border-radius: 5px;
     margin: 30px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
     display: flex;
     justify-content: space-between;
 }
 
 .main-nav__link:hover {
-    background-color: var(--fondo__header);
+    background-color: var(--hover--menu);
     text-decoration: underline;
 }
 /**VIDEO**/
@@ -88,6 +87,7 @@ body {
 }
 .video__video {
     position: absolute;
+    background-color: var(--fondo-video);
     top: 0;
     width: 100%;
     height: 100%;
@@ -126,7 +126,16 @@ body {
     font-size: 50px;
     padding: 0 30px;
 }
-
+.video::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Cambia el valor alpha para ajustar el nivel de opacidad */
+    z-index: 1; /* Asegúrate de que la capa esté por encima del video */
+}
 /**INFO**/
 
 .info {
@@ -333,7 +342,7 @@ span {
     justify-content: center;
     bottom: 0;
     background-image: url('./assets/images/Sintra pueblo.jpg');
-    background-color: rgba(0, 0, 0, 0.9);
+    position: relative;    
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -343,44 +352,57 @@ span {
     display: flex; 
 }
 
+.footer::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Cambia el valor alpha para ajustar el nivel de opacidad */
+    z-index: 1; /* Asegúrate de que la capa esté por encima del video */
+}
 .footer__contenedor {
     display: flex;
     justify-content: space-around; 
     align-items: center;
     flex-wrap: wrap; 
     margin: auto;
-    gap: 500px;
+    gap: 30px;
+    z-index: 2; /* Asegúrate de que la capa esté por encima del video */
+
 }
 
 .bandera__img {
     width: 100px;
 }
-.bloqueLegal__link,
-.RRSS__icono {
+.bloque-legal__link,
+.rrss__icono {
     margin-right: 20px;
     text-decoration: none;
-    color: var(--texto__video);
-    background-color: var(--hover--menu);
+    color: var(--fondo);
     padding: 15px;
     border-radius: 15px;
     font-size: 2rem;
     cursor: pointer;
+
 }
 
-.bloqueLegal__link:hover,
-.RRSS__icono:hover  {
-    background-color: var(--fondo__header); 
+.bloque-legal__link:hover,
+.rrss__icono:hover  {
+    background-color: var(--hover--menu); 
+    color: var(--fondo);
     padding: 15px;
     border-radius: 15px;
 }
 
-.RRSS__contenedor {
+.rrss__contenedor {
     display: flex;
     gap: 100px;
     color: var(--fondo);
 }
 
-.RRSS__img {
+.rrss__img {
     height: 50px;
     width: auto;
 }
@@ -510,6 +532,10 @@ span {
     .medio__card {
         min-height: auto;
     } 
+    .footer__contenedor {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /*TABLETS*/
