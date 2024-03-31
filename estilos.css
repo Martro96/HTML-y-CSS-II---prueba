@@ -337,6 +337,7 @@ span {
 /*******FOOTER************/
 /* Estilos generales del footer */
 .footer {
+    height: 60vh; 
     font-size: 2rem;
     align-items: center;
     justify-content: center;
@@ -348,8 +349,8 @@ span {
     background-position: center;
     color: var(--fondo);
     padding: 30px; 
-    height: 60vh; 
     display: flex; 
+    flex-direction: row; /* Por defecto, se muestra en fila */
 }
 
 .footer::before {
@@ -364,13 +365,14 @@ span {
 }
 .footer__contenedor {
     display: flex;
+    width: 100%;
+    height: fit-content;
     justify-content: space-around; 
     align-items: center;
     flex-wrap: wrap; 
     margin: auto;
-    gap: 30px;
     z-index: 2; /* Asegúrate de que la capa esté por encima del video */
-
+    padding-top: 20px;
 }
 
 .bandera__img {
@@ -398,10 +400,8 @@ span {
 
 .rrss__contenedor {
     display: flex;
-    gap: 100px;
     color: var(--fondo);
 }
-
 .rrss__img {
     height: 50px;
     width: auto;
@@ -532,16 +532,11 @@ span {
     .medio__card {
         min-height: auto;
     } 
-    .footer__contenedor {
-        display: flex;
+    /*FOOTER*/
+    .footer {
         flex-direction: column;
-        padding: 20px;
+        }
     }
-    .rrss__contenedor {
-        padding: 20px;
-    }
-}
-
 /*TABLETS*/
 
 @media only screen and (min-width: 800px) {
